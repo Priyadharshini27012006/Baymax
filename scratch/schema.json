@@ -1,0 +1,2252 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "title": "standard public schema",
+    "version": "14.5"
+  },
+  "host": "nubtbbzfbszwcmsrxhva.supabase.co:443",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "application/vnd.pgrst.object+json;nulls=stripped",
+    "application/vnd.pgrst.object+json",
+    "text/csv"
+  ],
+  "produces": [
+    "application/json",
+    "application/vnd.pgrst.object+json;nulls=stripped",
+    "application/vnd.pgrst.object+json",
+    "text/csv"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "produces": [
+          "application/openapi+json",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "summary": "OpenAPI description (this document)",
+        "tags": [
+          "Introspection"
+        ]
+      }
+    },
+    "/operators_new": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.shift"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.event"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/operators_new"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "operators_new"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.operators_new"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "operators_new"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.shift"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.event"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "operators_new"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.shift"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.event"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operators_new.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.operators_new"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "operators_new"
+        ]
+      }
+    },
+    "/operator_sessions": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.login_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.logout_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.is_active"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.updated_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/operator_sessions"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "operator_sessions"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.operator_sessions"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "operator_sessions"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.login_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.logout_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.is_active"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.updated_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "operator_sessions"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.operator_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.rfid_uid"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.login_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.logout_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.is_active"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.operator_sessions.updated_at"
+          },
+          {
+            "$ref": "#/parameters/body.operator_sessions"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "operator_sessions"
+        ]
+      }
+    },
+    "/production_trend": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.hour"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.output"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.target"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.recorded_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/production_trend"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "production_trend"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.production_trend"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "production_trend"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.hour"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.output"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.target"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.recorded_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "production_trend"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.hour"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.output"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.target"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.production_trend.recorded_at"
+          },
+          {
+            "$ref": "#/parameters/body.production_trend"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "production_trend"
+        ]
+      }
+    },
+    "/machines": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.machines.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.part_number"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.ideal_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.runtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.downtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.actual_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.id"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/machines"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "machines"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.machines"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "machines"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.machines.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.part_number"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.ideal_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.runtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.downtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.actual_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.id"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "machines"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.machines.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.part_number"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.ideal_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.runtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.downtime"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.actual_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.machines.id"
+          },
+          {
+            "$ref": "#/parameters/body.machines"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "machines"
+        ]
+      }
+    },
+    "/plc_data": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di1"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di2"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di3"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di4"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di5"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di6"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di7"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di8"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di9"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di10"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di11"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di12"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di13"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di14"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di15"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di16"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.idle_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.part_no"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/plc_data"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "plc_data"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.plc_data"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "plc_data"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di1"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di2"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di3"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di4"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di5"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di6"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di7"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di8"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di9"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di10"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di11"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di12"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di13"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di14"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di15"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di16"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.idle_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.part_no"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "plc_data"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di1"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di2"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di3"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di4"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di5"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di6"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di7"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di8"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di9"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di10"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di11"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di12"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di13"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di14"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di15"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.di16"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.planned_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.target_count"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.idle_cycle_time"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.good_parts"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.plc_data.part_no"
+          },
+          {
+            "$ref": "#/parameters/body.plc_data"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "plc_data"
+        ]
+      }
+    },
+    "/alerts": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.alerts.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.severity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.message"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.is_resolved"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/alerts"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "alerts"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.alerts"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "alerts"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.alerts.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.severity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.message"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.is_resolved"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "alerts"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.alerts.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.machine_no"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.severity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.message"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.is_resolved"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.alerts.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.alerts"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "alerts"
+        ]
+      }
+    },
+    "/rpc/get_employee_name_from_rfid": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "properties": {
+                "tag_uid": {
+                  "format": "text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "tag_uid"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) get_employee_name_from_rfid"
+        ]
+      }
+    },
+    "/rpc/toggle_rfid_status": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "properties": {
+                "uid": {
+                  "format": "text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uid"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) toggle_rfid_status"
+        ]
+      }
+    },
+    "/rpc/handle_rfid_scan": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "properties": {
+                "scanned_uid": {
+                  "format": "text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scanned_uid"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) handle_rfid_scan"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "operators_new": {
+      "required": [
+        "id",
+        "operator_id",
+        "operator_name"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "operator_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "operator_name": {
+          "format": "text",
+          "type": "string"
+        },
+        "rfid_uid": {
+          "format": "text",
+          "type": "string"
+        },
+        "machine_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "shift": {
+          "format": "text",
+          "type": "string"
+        },
+        "event": {
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "operator_sessions": {
+      "required": [
+        "id",
+        "operator_id",
+        "operator_name",
+        "machine_no"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "operator_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "operator_name": {
+          "format": "text",
+          "type": "string"
+        },
+        "rfid_uid": {
+          "format": "text",
+          "type": "string"
+        },
+        "machine_no": {
+          "format": "text",
+          "type": "string"
+        },
+        "login_time": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "logout_time": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "is_active": {
+          "default": true,
+          "format": "boolean",
+          "type": "boolean"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "updated_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "production_trend": {
+      "required": [
+        "id",
+        "hour",
+        "output",
+        "target"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "hour": {
+          "format": "text",
+          "type": "string"
+        },
+        "output": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "target": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "recorded_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "machines": {
+      "required": [
+        "runtime",
+        "id"
+      ],
+      "properties": {
+        "machine_no": {
+          "format": "text",
+          "type": "string"
+        },
+        "part_number": {
+          "format": "text",
+          "type": "string"
+        },
+        "status": {
+          "default": "STOPPED",
+          "format": "text",
+          "type": "string"
+        },
+        "cycle_time": {
+          "default": 0,
+          "format": "numeric",
+          "type": "number"
+        },
+        "ideal_cycle_time": {
+          "default": 0,
+          "format": "numeric",
+          "type": "number"
+        },
+        "runtime": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "downtime": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "planned_time": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "target_count": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "actual_count": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "good_parts": {
+          "default": 0,
+          "format": "integer",
+          "type": "integer"
+        },
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "plc_data": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "di1": {
+          "description": "start",
+          "format": "integer",
+          "type": "integer"
+        },
+        "di2": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di3": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di4": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di5": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di6": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di7": {
+          "description": "part in",
+          "format": "integer",
+          "type": "integer"
+        },
+        "di8": {
+          "description": "part out",
+          "format": "integer",
+          "type": "integer"
+        },
+        "di9": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di10": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di11": {
+          "description": "suction on",
+          "format": "integer",
+          "type": "integer"
+        },
+        "di12": {
+          "description": "suction off",
+          "format": "integer",
+          "type": "integer"
+        },
+        "di13": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di14": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di15": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "di16": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "status": {
+          "format": "text",
+          "type": "string"
+        },
+        "planned_time": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "target_count": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "idle_cycle_time": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "good_parts": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "part_no": {
+          "format": "text",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "alerts": {
+      "required": [
+        "id",
+        "machine_no",
+        "severity",
+        "message"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "machine_id": {
+          "format": "integer",
+          "type": "integer"
+        },
+        "machine_no": {
+          "format": "text",
+          "type": "string"
+        },
+        "severity": {
+          "format": "text",
+          "type": "string"
+        },
+        "message": {
+          "format": "text",
+          "type": "string"
+        },
+        "is_resolved": {
+          "default": false,
+          "format": "boolean",
+          "type": "boolean"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "parameters": {
+    "preferParams": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "in": "header",
+      "type": "string"
+    },
+    "preferReturn": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "return=representation",
+        "return=minimal",
+        "return=none"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "preferCount": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "count=none"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "preferPost": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "return=representation",
+        "return=minimal",
+        "return=none",
+        "resolution=ignore-duplicates",
+        "resolution=merge-duplicates"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "select": {
+      "name": "select",
+      "description": "Filtering Columns",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "on_conflict": {
+      "name": "on_conflict",
+      "description": "On Conflict",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "order": {
+      "name": "order",
+      "description": "Ordering",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "range": {
+      "name": "Range",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "header",
+      "type": "string"
+    },
+    "rangeUnit": {
+      "name": "Range-Unit",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "default": "items",
+      "in": "header",
+      "type": "string"
+    },
+    "offset": {
+      "name": "offset",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "limit": {
+      "name": "limit",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.operators_new": {
+      "name": "operators_new",
+      "description": "operators_new",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/operators_new"
+      }
+    },
+    "rowFilter.operators_new.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.operator_id": {
+      "name": "operator_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.operator_name": {
+      "name": "operator_name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.rfid_uid": {
+      "name": "rfid_uid",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.machine_id": {
+      "name": "machine_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.shift": {
+      "name": "shift",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.event": {
+      "name": "event",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operators_new.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.operator_sessions": {
+      "name": "operator_sessions",
+      "description": "operator_sessions",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/operator_sessions"
+      }
+    },
+    "rowFilter.operator_sessions.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.operator_id": {
+      "name": "operator_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.operator_name": {
+      "name": "operator_name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.rfid_uid": {
+      "name": "rfid_uid",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.machine_no": {
+      "name": "machine_no",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.login_time": {
+      "name": "login_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.logout_time": {
+      "name": "logout_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.is_active": {
+      "name": "is_active",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.operator_sessions.updated_at": {
+      "name": "updated_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.production_trend": {
+      "name": "production_trend",
+      "description": "production_trend",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/production_trend"
+      }
+    },
+    "rowFilter.production_trend.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.production_trend.hour": {
+      "name": "hour",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.production_trend.output": {
+      "name": "output",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.production_trend.target": {
+      "name": "target",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.production_trend.recorded_at": {
+      "name": "recorded_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.machines": {
+      "name": "machines",
+      "description": "machines",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/machines"
+      }
+    },
+    "rowFilter.machines.machine_no": {
+      "name": "machine_no",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.part_number": {
+      "name": "part_number",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.status": {
+      "name": "status",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.cycle_time": {
+      "name": "cycle_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.ideal_cycle_time": {
+      "name": "ideal_cycle_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.runtime": {
+      "name": "runtime",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.downtime": {
+      "name": "downtime",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.planned_time": {
+      "name": "planned_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.target_count": {
+      "name": "target_count",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.actual_count": {
+      "name": "actual_count",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.good_parts": {
+      "name": "good_parts",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.machines.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.plc_data": {
+      "name": "plc_data",
+      "description": "plc_data",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/plc_data"
+      }
+    },
+    "rowFilter.plc_data.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di1": {
+      "name": "di1",
+      "description": "start",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di2": {
+      "name": "di2",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di3": {
+      "name": "di3",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di4": {
+      "name": "di4",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di5": {
+      "name": "di5",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di6": {
+      "name": "di6",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di7": {
+      "name": "di7",
+      "description": "part in",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di8": {
+      "name": "di8",
+      "description": "part out",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di9": {
+      "name": "di9",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di10": {
+      "name": "di10",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di11": {
+      "name": "di11",
+      "description": "suction on",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di12": {
+      "name": "di12",
+      "description": "suction off",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di13": {
+      "name": "di13",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di14": {
+      "name": "di14",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di15": {
+      "name": "di15",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.di16": {
+      "name": "di16",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.status": {
+      "name": "status",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.planned_time": {
+      "name": "planned_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.target_count": {
+      "name": "target_count",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.idle_cycle_time": {
+      "name": "idle_cycle_time",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.good_parts": {
+      "name": "good_parts",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.plc_data.part_no": {
+      "name": "part_no",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.alerts": {
+      "name": "alerts",
+      "description": "alerts",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/alerts"
+      }
+    },
+    "rowFilter.alerts.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.machine_id": {
+      "name": "machine_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.machine_no": {
+      "name": "machine_no",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.severity": {
+      "name": "severity",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.message": {
+      "name": "message",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.is_resolved": {
+      "name": "is_resolved",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.alerts.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    }
+  },
+  "externalDocs": {
+    "description": "PostgREST Documentation",
+    "url": "https://postgrest.org/en/v14/references/api.html"
+  }
+}

@@ -1,0 +1,10 @@
+Demo6.6 target logic:
+- CNC-01 only
+- Read only from plc_data
+- DI1 toggle running/idle state
+- DI7 cycle start
+- DI12 cycle stop => actual_count++
+- ideal_cycle_time=50
+- target_count=720
+- downtime=0
+- planned_time=0

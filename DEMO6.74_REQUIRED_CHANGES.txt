@@ -1,0 +1,21 @@
+DEMO6.74
+
+CNC-01:
+- plc_data ID=1 source row for status, planned_time, target_count, good_parts, part_no, idle_cycle_time
+- status = plc_data.status (Running/Idle/Fault)
+- actual_count from DI7/DI12 only
+- runtime from valid created_at intervals
+- downtime = planned_time - runtime
+- cycle time = DI12 timestamp - DI7 timestamp
+
+CNC-02 to CNC-25:
+- machines table only
+- no PLC logic
+- no fake data
+- no Math.random
+
+Dashboard/Monitoring/OEE/Reports:
+- 25 machines
+- CNC-01 from plc_data
+- CNC-02..25 from machines table
+hgfjfjfggh
